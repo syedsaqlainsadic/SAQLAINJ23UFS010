@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <style type="text/css">
+        :required,:invalid {background-color: skyblue;}
+        :valid{background-color: white;}
+    </style>
+    <script>
+        function displayRating(slider){
+            document.getElementById("ratingValue").innerHTML=slider.value;
+        }
+    </script>
+<head>
+        <title>Register an Employee Form</title> 
+</head>
+<body>
+    <h1>Employee Registration Form</h1> 
+    <form action="thankYou.html"> 
+        <label for="fullName">Full Name:</label><br/>
+        <input type="text" name="fullName" id="fullName" placeholder="Enter your full name" autofocus required />*<br/>
+        <label for="email">Email Id:</label><br/>
+        <input type="email" name="email" id="email" placeholder="Enter your email id" required />*<br/>
+        <label for="dateOfBirth">Date Of Birth:</label><br/>
+        <input type="date" name="dateOfBirth" id="dateOfBirth" placeholder="Enter your date of Birth" required />*<br/>
+        <label for="age">Age:</label><br/>
+        <input type="number" name="age" id="age" size="6" min="18" max="120" step="1" value="21" />*<br/>
+        <label for="rating">Rating:</label><br/>
+        <input type="range" name="rating" id="rating" min="0" max="100" step="1" value="0" oninput="output.value=rating.value" />
+        <output name="output">0</output><br/>
+        <label for="phone">Enter Phone Number</label><br/>
+        <input type="text" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="XXX-XXX-XXXX" required>*<br/>
+        <button>
+            <input type="submit" value="Register" />
+        </button>
+        <p>Field Marked * are compulsory</p>
+    </form> 
+</body>
+</html>
